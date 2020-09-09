@@ -1,0 +1,116 @@
+.headDeta
+  display: flex
+  justify-content: space-between
+  @include celular
+    flex-flow: column
+    justify-content: center
+  #addCompra
+    @include celular
+      font-size: 13px
+      margin: 0 auto
+.totaisCard
+  @include tablet-mini
+    padding: 20
+  .card
+    box-shadow: 0 1px 1px rgba(0,0,0,.05) 
+    color: #fff
+    text-align: center  
+    height: 8em 
+    position: relative 
+    @include celular-s
+      margin: 0 -10px 
+    h3
+      margin-top: 15
+      font: 
+        size: 25
+        weight: 400 
+      @include tablet-mini
+        font-size: 20  
+    p
+      font: 
+        size: 20
+        weight: 700   
+    .pgDtls
+      background: rgba(255,0,0,0.7)
+      color: #fff
+      position: absolute
+      width: 100%
+      height: 100%
+      top: 0
+      display: flex
+      align-items: center
+      justify-content: center
+      border: solid 1px #f00 
+      .closePag
+        position: absolute
+        top: 0 
+        right: 0                
+         
+.nub
+  background: #563D7C
+.pag
+  background: #002c47  
+.cred
+  background-color: #0cbaba
+  background-image: linear-gradient(400deg, #0cbaba 0%, #380036 130%)
+.dig
+  background: #233D88  
+
+tr
+  &:nth-child(even) 
+    background-color: #d3d3d3
+    box-shadow: 0 1px 1px rgba(0,0,0,.09) 
+.table-header
+  background: #18A0A9
+  color: #fff
+  @include celular
+    display: none
+.table-body
+  td
+    position: relative
+    line-height: 30px
+    //EDITAR INPUTS
+    .inputEdit
+      position: absolute  
+      top: 8px
+      right: 0
+      display: none
+    .updBtn
+      display: none 
+  span
+    display: none
+  @include celular
+    td
+      display: flex
+      line-height: 20px
+      flex-flow: row
+      padding: .3rem
+      font-weight: 600
+      padding: 10px 
+      justify-content: space-between
+    #data-th
+      &:before
+        content: attr(data-th)
+        font-weight: bold               
+    #total-table
+      display: none 
+    #total
+      display: flex
+      justify-content: space-between       
+  .botoes
+    display: flex
+    justify-content: center
+    @include celular
+      justify-content: space-between
+      width: 100%
+
+
+
+
+  
+
+
+
+
+
+  

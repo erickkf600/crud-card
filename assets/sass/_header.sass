@@ -1,0 +1,117 @@
+.header 
+  background: #4A4A4A
+  position: fixed
+  width: 100%
+  z-index: 300
+  padding: .6rem .8rem
+  ul
+    display: flex
+    justify-content: space-between
+    list-style: none
+    margin: 5px 0 5px 0
+    li
+      color: #fff
+      button
+        color: #fff
+        background: transparent
+        border: none
+        margin-left: -35px
+        &:focus
+          outline: none 
+
+
+/*----------------toggeled sidebar----------------*/
+
+.page-wrapper 
+  .sidebar-wrapper
+    left: 0px
+    transition: all 0.5s ease-in-out
+
+.sidebar-wrapper
+  width: 260px
+  height: 100%
+  position: fixed
+  top: 0
+  left: -300px
+  background: #23C1CC
+  z-index: 2
+  @include tablet
+    width: 42px
+  ul
+    list-style: none
+    margin: 0px
+    padding: 80px 0 0 0
+    overflow: hidden
+    position: relative
+  li
+    @include tablet
+      span
+        display: none
+        @include transition(display 0.5s ease-in-out)
+    a
+      display: block
+      padding: 19px 12px
+      color: #fff
+      border-left: 0px solid #dedede
+      text-decoration: none
+      border-bottom: .5px solid #c2c2c2
+      transition: .3s
+      &:hover
+        background: #18A0A9
+      i
+        margin-right: 25px
+.cartoes  
+  overflow-x: auto 
+  @include tablet 
+    display: none
+  &::-webkit-scrollbar  
+    width: 0    
+  .tot
+    color: #fff
+    text-align: center 
+    border-radius: 0
+    height: 45px
+    line-height: 45px
+    font:
+      size: 17
+      weight: 600
+  #totLink
+    padding: 8px 8px   
+    
+            
+.sidebar-wrapper.min-sidenav
+  width: 42px
+  transition: all 0.5s ease-in-out 
+  @include tablet
+    width: 280px
+  @include celular  
+    width: 260px
+  ul
+    overflow-x: scrool  
+  li
+    span
+      display: none
+      @include transition(display 0.5s ease-in-out)
+      @include tablet
+        display: inline
+  .cartoes
+    display: none
+    @include tablet
+      display: block
+    
+      
+.page-content
+  transition: all 0.5s ease-in-out
+  padding: 80px 0 0 25px 
+  @include flat
+    padding: 80px 0 0 300px
+.page-content.flex-page  
+  padding: 80px 30px
+  transition: all 0.5s ease-in-out  
+  @include tablet
+    padding: 80px 0 0 25px 
+
+    
+
+
+
